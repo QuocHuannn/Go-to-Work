@@ -1,0 +1,3 @@
+1.733417051926399e+09	INFO	cli/main.log.go:13	Logger initialized
+2024-12-05T23:47:35.292+0700	INFO	cli/main.log.go:16	Info log	{"line": 1}
+2024-12-05T23:47:35.292+0700	INFO	cli/main.log.go:17	Info log	{"line": 2}
