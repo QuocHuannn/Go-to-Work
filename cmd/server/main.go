@@ -1,10 +1,7 @@
 package main
 
-import (
-	"github.com/QuocHuannn/Go-to-Work/internal/routers"
-)
+import "github.com/QuocHuannn/Go-to-Work/internal/initalize"
 
 func main() {
-	r := routers.NewRouter()
-	r.Run(":8002")
+	initalize.Run()
 }
