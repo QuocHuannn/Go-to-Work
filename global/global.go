@@ -3,12 +3,13 @@ package global
 import (
 	"github.com/QuocHuannn/Go-to-Work/pkg/logger"
 	"github.com/QuocHuannn/Go-to-Work/pkg/setting"
+	"gorm.io/gorm"
 )
 
 var (
 	Config setting.Config
 	Logger *logger.LoggerZap
-	// Mdb    *gorm.DB
+	Mdb    *gorm.DB
 )
 
 /*
