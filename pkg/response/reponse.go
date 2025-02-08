@@ -22,3 +22,10 @@ func ResponseError(c *gin.Context, err *Error, msg string) {
 		"message": msg,
 	})
 }
+
+func ResponseSuccess(c *gin.Context, data interface{}) {
+    c.JSON(200, gin.H{
+        "success": true,
+        "data":    data,
+    })
+}

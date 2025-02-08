@@ -19,7 +19,6 @@ func InitRouter() *gin.Engine {
 	// r.Use() // logging
 	// r.Use() // cross
 	// r.Use() // limiter global
-	manageRouter := routers.RouterGroupApp.Manager
 	userRouter := routers.RouterGroupApp.User
 
 	MainGroup := r.Group("/v1/2024")
@@ -29,10 +28,6 @@ func InitRouter() *gin.Engine {
 	{
 		userRouter.InitUserRouter(MainGroup)
 		userRouter.InitProductRouter(MainGroup)
-	}
-	{
-		manageRouter.InitUserRouter(MainGroup)
-		manageRouter.InitAdminRouter(MainGroup)
 	}
 	return r
 }
