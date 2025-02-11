@@ -1,9 +1,11 @@
 package manager
 
 import (
-	"github.com/QuocHuannn/Go-to-Work/internal/repo"
-	"github.com/gin-gonic/gin"
 	"github.com/QuocHuannn/Go-to-Work/internal/controller"
+	"github.com/QuocHuannn/Go-to-Work/internal/repo"
+	"
+ithub.com/QuocHuannn/Go-to-Work/internal/service"
+	"
 	"github.com/QuocHuannn/Go-to-Work/internal/service"
 )
 
@@ -13,7 +15,7 @@ func (pr *UserRouter) InitUserRouter(Router *gin.RouterGroup) {
 	//public router
 	// this is non-dependency router
 	ur := repo.NewUserRepository()
-	us := service.NewUserService(ur.(*repo.UserRepository))
+	us := service.NewUserService(ur)
 	userHandlerNonDependency := controller.NewUserController(us)
 
 	// Wire go
