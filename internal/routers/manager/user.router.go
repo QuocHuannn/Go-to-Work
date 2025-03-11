@@ -3,10 +3,8 @@ package manager
 import (
 	"github.com/QuocHuannn/Go-to-Work/internal/controller"
 	"github.com/QuocHuannn/Go-to-Work/internal/repo"
-	"
-ithub.com/QuocHuannn/Go-to-Work/internal/service"
-	"
 	"github.com/QuocHuannn/Go-to-Work/internal/service"
+	"github.com/gin-gonic/gin"
 )
 
 type UserRouter struct{}

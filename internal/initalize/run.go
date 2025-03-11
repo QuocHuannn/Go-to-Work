@@ -2,6 +2,8 @@ package initalize
 
 import (
 	"fmt"
+	"strconv"
+
 	"go.uber.org/zap"
 
 	"github.com/QuocHuannn/Go-to-Work/global"
@@ -18,7 +20,8 @@ func Run() {
 	InitRouter()
 
 	r := InitRouter()
-	if err := r.Run(":8002"); err != nil {
+	port := ":" + strconv.Itoa(global.Config.Server.Port)
+	if err := r.Run(port); err != nil {
 		global.Logger.Fatal("Failed to start server", zap.Error(err))
 	}
 }

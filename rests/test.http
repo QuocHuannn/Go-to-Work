@@ -1,0 +1,31 @@
+### check status by docker 
+GET http://localhost:8008/v1/2024/checkStatus
+
+### Register new user
+POST http://localhost:8008/v1/2024/user/register
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "password123",
+    "fullname": "Test User"
+}
+
+### Verify OTP
+POST http://localhost:8008/v1/2024/user/otp
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "otp": "123456"
+}
+
+### Get user info
+GET http://localhost:8008/v1/2024/user/get_info
+Authorization: Bearer your_token_here
+
+### Search products
+GET http://localhost:8008/v1/2024/product/search?keyword=phone&page=1&limit=10
+
+### Get product detail
+GET http://localhost:8008/v1/2024/product/detail/1

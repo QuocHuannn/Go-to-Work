@@ -1,0 +1,5 @@
+*.gitignore
+*.md
+
+
+#docker run --name crm_app --network my-app-net -p 8001:8001 -e DB_HOST=mysql_db -e DB_USER=root -e DB_PASSWORD=root -e DB_NAME=crm -e REDIS_HOST=redis_db crm-app
