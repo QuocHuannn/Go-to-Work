@@ -1,0 +1,52 @@
+@baseUrl=http://localhost:8081
+
+### 1. User Registration - Đăng ký người dùng mới
+# Trả về mã thành công và gửi OTP qua email
+POST {{baseUrl}}/api/user/register
+Content-Type: application/json
+
+{
+    "email": "truonghuan0709@gmail.com",
+    "purpose": "TEST_USER"
+}
+
+### 2. Verify OTP - Xác thực mã OTP 
+# Trả về mã thành công và kích hoạt tài khoản người dùng
+POST {{baseUrl}}/api/user/otp
+Content-Type: application/json
+
+{
+    "email": "truonghuan0709@gmail.com",
+    "otp": "123456"
+}
+
+### 3. Get User Info - Lấy thông tin người dùng
+# Trả về thông tin chi tiết của người dùng
+GET {{baseUrl}}/api/user/get_info?email=truonghuan0709@gmail.com
+
+### 4. Register Form Submission - Gửi form đăng ký qua web
+# Mô phỏng việc submit form từ trang web
+POST {{baseUrl}}/register
+Content-Type: application/x-www-form-urlencoded
+
+email=truonghuan0709@gmail.com&purpose=TEST_USER
+
+### 5. Verify OTP Form Submission - Gửi form xác thực OTP qua web
+# Mô phỏng việc submit form xác thực OTP từ trang web
+POST {{baseUrl}}/verify-otp
+Content-Type: application/x-www-form-urlencoded
+
+email=truonghuan0709@gmail.com&otp=123456
+
+### 6. Access Home Page - Truy cập trang chủ
+GET {{baseUrl}}/
+
+### 7. Access Register Page - Truy cập trang đăng ký
+GET {{baseUrl}}/register
+
+### 8. Access Verify OTP Page - Truy cập trang xác thực OTP
+GET {{baseUrl}}/verify-otp?email=truonghuan0709@gmail.com
+
+### 9. Access Profile Page - Truy cập trang hồ sơ người dùng
+GET {{baseUrl}}/profile?email=truonghuan0709@gmail.com
+

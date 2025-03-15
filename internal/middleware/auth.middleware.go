@@ -9,7 +9,7 @@ func AuthenMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.GetHeader("Authorization")
 		if token != "valid-token" {
-			response.ResponseError(c, response.ErrInvalidAuthToken, response.ErrInvalidAuthToken.Message)
+			response.ResponseError(c, response.ErrInvalidAuthToken.Code, response.ErrInvalidAuthToken.Message)
 			c.Abort()
 			return
 		}

@@ -11,21 +11,33 @@ type Error struct {
 	Message string `json:"message"`
 }
 
-var ErrInvalidAuthToken = &Error{
-	Code:    http.StatusUnauthorized,
-	Message: "Invalid token",
-}
+var (
+	ErrInvalidAuthToken = &Error{
+		Code:    http.StatusUnauthorized,
+		Message: "Invalid token",
+	}
 
-func ResponseError(c *gin.Context, err *Error, msg string) {
-	c.JSON(err.Code, gin.H{
-		"code":    err.Code,
-		"message": msg,
+	ErrCodeInvalidParams = &Error{
+		Code:    http.StatusBadRequest,
+		Message: "Invalid parameters",
+	}
+)
+
+func ResponseError(c *gin.Context, code int, message string) {
+	if message == "" {
+		message = msg[code]
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": false,
+		"code":    code,
+		"message": message,
 	})
 }
 
 func ResponseSuccess(c *gin.Context, data interface{}) {
-    c.JSON(200, gin.H{
-        "success": true,
-        "data":    data,
-    })
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"data":    data,
+	})
 }
