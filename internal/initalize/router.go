@@ -1,6 +1,8 @@
 package initalize
 
 import (
+	"net/http"
+
 	"github.com/QuocHuannn/Go-to-Work/global"
 	"github.com/QuocHuannn/Go-to-Work/internal/routers"
 	"github.com/gin-gonic/gin"
@@ -15,6 +17,11 @@ func InitRouter() *gin.Engine {
 		gin.SetMode(gin.ReleaseMode)
 		r = gin.New()
 	}
+
+	// Load HTML templates
+	r.LoadHTMLGlob("templates/*")
+	r.Static("/static", "./static")
+
 	// middleware
 	// r.Use() // logging
 	// r.Use() // cross
@@ -23,11 +30,23 @@ func InitRouter() *gin.Engine {
 
 	MainGroup := r.Group("/v1/2024")
 	{
-		MainGroup.GET("/checkStatus") // tracking monitor
+		MainGroup.GET("/checkStatus", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"status":  "ok",
+				"message": "Service is running",
+			})
+		})
 	}
 	{
 		userRouter.InitUserRouter(MainGroup)
 		userRouter.InitProductRouter(MainGroup)
 	}
+
+	// Web routes without v1/2024 prefix
+	WebGroup := r.Group("/")
+	{
+		userRouter.InitUserRouter(WebGroup)
+	}
+
 	return r
 }

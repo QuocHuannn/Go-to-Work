@@ -83,3 +83,232 @@ main.main
 	f:/Go-to-Work/cmd/server/main.go:6
 runtime.main
 	F:/Go_Install/src/runtime/proc.go:272
+2025-03-15T18:53:28.311+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-15T18:53:31.019+0700	ERROR	initalize/mysql.go:18	Failed to connect database	{"error": "dial tcp: lookup mysql_db: no such host"}
+github.com/QuocHuannn/Go-to-Work/internal/initalize.checkErrorPanic
+	F:/Go-to-Work/internal/initalize/mysql.go:18
+github.com/QuocHuannn/Go-to-Work/internal/initalize.InitMysql
+	F:/Go-to-Work/internal/initalize/mysql.go:59
+github.com/QuocHuannn/Go-to-Work/internal/initalize.Run
+	F:/Go-to-Work/internal/initalize/run.go:18
+main.main
+	F:/Go-to-Work/cmd/server/main.go:6
+runtime.main
+	F:/Go_Install/src/runtime/proc.go:272
+2025-03-15T18:56:02.660+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-15T18:56:05.374+0700	ERROR	initalize/mysql.go:18	Failed to connect database	{"error": "dial tcp: lookup mysql_db: no such host"}
+github.com/QuocHuannn/Go-to-Work/internal/initalize.checkErrorPanic
+	F:/Go-to-Work/internal/initalize/mysql.go:18
+github.com/QuocHuannn/Go-to-Work/internal/initalize.InitMysql
+	F:/Go-to-Work/internal/initalize/mysql.go:59
+github.com/QuocHuannn/Go-to-Work/internal/initalize.Run
+	F:/Go-to-Work/internal/initalize/run.go:18
+main.main
+	F:/Go-to-Work/cmd/server/main.go:6
+runtime.main
+	F:/Go_Install/src/runtime/proc.go:272
+2025-03-15T18:56:08.182+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-15T18:56:10.892+0700	ERROR	initalize/mysql.go:18	Failed to connect database	{"error": "dial tcp: lookup mysql_db: no such host"}
+github.com/QuocHuannn/Go-to-Work/internal/initalize.checkErrorPanic
+	F:/Go-to-Work/internal/initalize/mysql.go:18
+github.com/QuocHuannn/Go-to-Work/internal/initalize.InitMysql
+	F:/Go-to-Work/internal/initalize/mysql.go:59
+github.com/QuocHuannn/Go-to-Work/internal/initalize.Run
+	F:/Go-to-Work/internal/initalize/run.go:18
+main.main
+	F:/Go-to-Work/cmd/server/main.go:6
+runtime.main
+	F:/Go_Install/src/runtime/proc.go:272
+2025-03-15T18:58:45.243+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-15T18:58:47.952+0700	ERROR	initalize/mysql.go:18	Failed to connect database	{"error": "dial tcp: lookup mysql_db: no such host"}
+github.com/QuocHuannn/Go-to-Work/internal/initalize.checkErrorPanic
+	F:/Go-to-Work/internal/initalize/mysql.go:18
+github.com/QuocHuannn/Go-to-Work/internal/initalize.InitMysql
+	F:/Go-to-Work/internal/initalize/mysql.go:59
+github.com/QuocHuannn/Go-to-Work/internal/initalize.Run
+	F:/Go-to-Work/internal/initalize/run.go:18
+main.main
+	F:/Go-to-Work/cmd/server/main.go:6
+runtime.main
+	F:/Go_Install/src/runtime/proc.go:272
+2025-03-15T19:00:10.235+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-15T19:00:10.246+0700	INFO	initalize/mysql.go:60	Connect database success	{"host": "localhost"}
+2025-03-15T19:00:10.382+0700	INFO	initalize/mysql.go:132	Tables migrated successfully
+2025-03-15T19:00:10.422+0700	INFO	initalize/redis.go:50	Redis connection successful	{"host": "localhost", "port": 6379}
+2025-03-15T23:33:35.032+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-15T23:33:35.043+0700	INFO	initalize/mysql.go:60	Connect database success	{"host": "localhost"}
+2025-03-15T23:33:35.185+0700	INFO	initalize/mysql.go:132	Tables migrated successfully
+2025-03-15T23:33:35.223+0700	INFO	initalize/redis.go:50	Redis connection successful	{"host": "localhost", "port": 6379}
+2025-03-15T23:34:15.810+0700	ERROR	sendto/sendto.go:57	Failed to send email	{"error": "535 5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-225c68885a1sm46318525ad.13 - gsmtp"}
+github.com/QuocHuannn/Go-to-Work/internal/utils/sendto.SendTextEmailOTP
+	F:/Go-to-Work/internal/utils/sendto/sendto.go:57
+github.com/QuocHuannn/Go-to-Work/internal/service.(*UserService).Register
+	F:/Go-to-Work/internal/service/user.service.go:66
+github.com/QuocHuannn/Go-to-Work/internal/controller.(*UserController).Register
+	F:/Go-to-Work/internal/controller/user.contronller.go:41
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.RecoveryWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/recovery.go:48
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.LoggerWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/logger.go:84
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:361
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:326
+net/http.serverHandler.ServeHTTP
+	F:/Go_Install/src/net/http/server.go:3210
+net/http.(*conn).serve
+	F:/Go_Install/src/net/http/server.go:2092
+2025-03-15T23:49:47.585+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-15T23:49:47.595+0700	INFO	initalize/mysql.go:60	Connect database success	{"host": "localhost"}
+2025-03-15T23:49:47.735+0700	INFO	initalize/mysql.go:132	Tables migrated successfully
+2025-03-15T23:49:47.771+0700	INFO	initalize/redis.go:50	Redis connection successful	{"host": "localhost", "port": 6379}
+2025-03-16T00:01:30.202+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-16T00:01:30.213+0700	INFO	initalize/mysql.go:60	Connect database success	{"host": "localhost"}
+2025-03-16T00:01:30.340+0700	INFO	initalize/mysql.go:132	Tables migrated successfully
+2025-03-16T00:01:30.374+0700	INFO	initalize/redis.go:50	Redis connection successful	{"host": "localhost", "port": 6379}
+2025-03-16T00:03:16.140+0700	INFO	sendto/sendto.go:62	Attempting to send email	{"smtp_host": "smtp.gmail.com", "smtp_port": "587", "smtp_username": "your-email@gmail.com", "recipients": ["truonghuan0709@gmail.com"], "otp": "123456"}
+2025-03-16T00:03:18.385+0700	ERROR	sendto/sendto.go:99	Failed to send email	{"error": "535 5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-225c6bbed5bsm46477505ad.202 - gsmtp"}
+github.com/QuocHuannn/Go-to-Work/internal/utils/sendto.SendTextEmailOTP
+	F:/Go-to-Work/internal/utils/sendto/sendto.go:99
+github.com/QuocHuannn/Go-to-Work/internal/service.(*UserService).Register
+	F:/Go-to-Work/internal/service/user.service.go:66
+github.com/QuocHuannn/Go-to-Work/internal/controller.(*UserController).ProcessRegister
+	F:/Go-to-Work/internal/controller/user.contronller.go:134
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.RecoveryWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/recovery.go:48
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.LoggerWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/logger.go:84
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:361
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:326
+net/http.serverHandler.ServeHTTP
+	F:/Go_Install/src/net/http/server.go:3210
+net/http.(*conn).serve
+	F:/Go_Install/src/net/http/server.go:2092
+2025-03-16T00:07:05.364+0700	INFO	sendto/sendto.go:62	Attempting to send email	{"smtp_host": "smtp.gmail.com", "smtp_port": "587", "smtp_username": "your-email@gmail.com", "recipients": ["truonghuan0709@gmail.com"], "otp": "919721"}
+2025-03-16T00:07:06.962+0700	ERROR	sendto/sendto.go:99	Failed to send email	{"error": "535 5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-737115593aesm4631298b3a.46 - gsmtp"}
+github.com/QuocHuannn/Go-to-Work/internal/utils/sendto.SendTextEmailOTP
+	F:/Go-to-Work/internal/utils/sendto/sendto.go:99
+github.com/QuocHuannn/Go-to-Work/internal/service.(*UserService).Register
+	F:/Go-to-Work/internal/service/user.service.go:66
+github.com/QuocHuannn/Go-to-Work/internal/controller.(*UserController).ProcessRegister
+	F:/Go-to-Work/internal/controller/user.contronller.go:134
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.RecoveryWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/recovery.go:48
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.LoggerWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/logger.go:84
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:361
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:326
+net/http.serverHandler.ServeHTTP
+	F:/Go_Install/src/net/http/server.go:3210
+net/http.(*conn).serve
+	F:/Go_Install/src/net/http/server.go:2092
+2025-03-16T00:07:18.906+0700	INFO	sendto/sendto.go:62	Attempting to send email	{"smtp_host": "smtp.gmail.com", "smtp_port": "587", "smtp_username": "your-email@gmail.com", "recipients": ["abc@gmail.com"], "otp": "274275"}
+2025-03-16T00:07:20.311+0700	ERROR	sendto/sendto.go:99	Failed to send email	{"error": "535 5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-301539d40a1sm3305036a91.1 - gsmtp"}
+github.com/QuocHuannn/Go-to-Work/internal/utils/sendto.SendTextEmailOTP
+	F:/Go-to-Work/internal/utils/sendto/sendto.go:99
+github.com/QuocHuannn/Go-to-Work/internal/service.(*UserService).Register
+	F:/Go-to-Work/internal/service/user.service.go:66
+github.com/QuocHuannn/Go-to-Work/internal/controller.(*UserController).ProcessRegister
+	F:/Go-to-Work/internal/controller/user.contronller.go:134
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.RecoveryWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/recovery.go:48
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.LoggerWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/logger.go:84
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:361
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:326
+net/http.serverHandler.ServeHTTP
+	F:/Go_Install/src/net/http/server.go:3210
+net/http.(*conn).serve
+	F:/Go_Install/src/net/http/server.go:2092
+2025-03-16T00:08:51.676+0700	INFO	sendto/sendto.go:62	Attempting to send email	{"smtp_host": "smtp.gmail.com", "smtp_port": "587", "smtp_username": "your-email@gmail.com", "recipients": ["truonghuan0709@gmail.com"], "otp": "767842"}
+2025-03-16T00:08:53.081+0700	ERROR	sendto/sendto.go:99	Failed to send email	{"error": "535 5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3015351a0dfsm2978560a91.18 - gsmtp"}
+github.com/QuocHuannn/Go-to-Work/internal/utils/sendto.SendTextEmailOTP
+	F:/Go-to-Work/internal/utils/sendto/sendto.go:99
+github.com/QuocHuannn/Go-to-Work/internal/service.(*UserService).Register
+	F:/Go-to-Work/internal/service/user.service.go:66
+github.com/QuocHuannn/Go-to-Work/internal/controller.(*UserController).ProcessRegister
+	F:/Go-to-Work/internal/controller/user.contronller.go:134
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.RecoveryWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/recovery.go:48
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.LoggerWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/logger.go:84
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:361
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:326
+net/http.serverHandler.ServeHTTP
+	F:/Go_Install/src/net/http/server.go:3210
+net/http.(*conn).serve
+	F:/Go_Install/src/net/http/server.go:2092
+2025-03-16T00:10:32.289+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-16T00:10:32.300+0700	INFO	initalize/mysql.go:60	Connect database success	{"host": "localhost"}
+2025-03-16T00:10:32.434+0700	INFO	initalize/mysql.go:132	Tables migrated successfully
+2025-03-16T00:10:32.473+0700	INFO	initalize/redis.go:50	Redis connection successful	{"host": "localhost", "port": 6379}
+2025-03-16T00:10:38.578+0700	INFO	sendto/sendto.go:63	Attempting to send email	{"smtp_host": "smtp.gmail.com", "smtp_port": "587", "smtp_username": "your-email@gmail.com", "recipients": ["truonghuan0709@gmail.com"], "otp": "123456"}
+2025-03-16T00:10:40.037+0700	ERROR	sendto/sendto.go:100	Failed to send email	{"error": "535 5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30153bc301esm2944953a91.49 - gsmtp"}
+github.com/QuocHuannn/Go-to-Work/internal/utils/sendto.SendTextEmailOTP
+	F:/Go-to-Work/internal/utils/sendto/sendto.go:100
+github.com/QuocHuannn/Go-to-Work/internal/service.(*UserService).Register
+	F:/Go-to-Work/internal/service/user.service.go:66
+github.com/QuocHuannn/Go-to-Work/internal/controller.(*UserController).ProcessRegister
+	F:/Go-to-Work/internal/controller/user.contronller.go:134
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.RecoveryWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/recovery.go:48
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.LoggerWithWriter.func1
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/logger.go:84
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/context.go:108
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:361
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/PC/go/pkg/mod/github.com/gin-gonic/gin@v1.3.0/gin.go:326
+net/http.serverHandler.ServeHTTP
+	F:/Go_Install/src/net/http/server.go:3210
+net/http.(*conn).serve
+	F:/Go_Install/src/net/http/server.go:2092
+2025-03-16T00:12:22.842+0700	INFO	initalize/run.go:17	InitLogger success	{"oke": "success"}
+2025-03-16T00:12:22.851+0700	INFO	initalize/mysql.go:60	Connect database success	{"host": "localhost"}
+2025-03-16T00:12:22.991+0700	INFO	initalize/mysql.go:132	Tables migrated successfully
+2025-03-16T00:12:23.033+0700	INFO	initalize/redis.go:50	Redis connection successful	{"host": "localhost", "port": 6379}
+2025-03-16T00:12:29.800+0700	INFO	sendto/sendto.go:77	Attempting to send email	{"smtp_host": "smtp.gmail.com", "smtp_port": "587", "smtp_username": "truonghuan0709@gmail.com", "recipients": ["truonghuan0709@gmail.com"], "otp": "123456"}
+2025-03-16T00:12:32.423+0700	INFO	sendto/sendto.go:118	Email sent successfully	{"to": ["truonghuan0709@gmail.com"]}

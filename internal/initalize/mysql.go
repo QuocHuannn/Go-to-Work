@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/QuocHuannn/Go-to-Work/global"
+	"github.com/QuocHuannn/Go-to-Work/internal/config"
 	"github.com/QuocHuannn/Go-to-Work/internal/po"
 	"go.uber.org/zap"
 	"gorm.io/driver/mysql"
@@ -29,8 +30,13 @@ func logError(err error, errString string) bool {
 	return false
 }
 
+// GetDB returns the global database instance
+func GetDB() *gorm.DB {
+	return global.Mdb
+}
+
 func InitMysql() {
-	m := global.Config.Mysql
+	m := config.Cfg.DB
 
 	// Override host with environment variable if running in Docker
 	host := m.Host
@@ -48,10 +54,30 @@ func InitMysql() {
 	fmt.Printf("MySQL DSN (without password): %s:%s@tcp(%s:%v)/%s\n",
 		m.Username, "****", host, m.Port, m.DBName)
 
-	db, err := gorm.Open(mysql.Open(s), &gorm.Config{
-		SkipDefaultTransaction: false,
-	})
-	checkErrorPanic(err, "Failed to connect database")
+	// Thêm cơ chế retry cho kết nối MySQL trong Docker
+	var db *gorm.DB
+	var err error
+
+	maxRetries := 5
+	retryDelay := 5 * time.Second
+
+	for i := 0; i < maxRetries; i++ {
+		db, err = gorm.Open(mysql.Open(s), &gorm.Config{
+			SkipDefaultTransaction: false,
+		})
+
+		if err == nil {
+			break
+		}
+
+		fmt.Printf("Failed to connect to MySQL (attempt %d/%d): %v\n", i+1, maxRetries, err)
+		if i < maxRetries-1 {
+			fmt.Printf("Retrying in %v...\n", retryDelay)
+			time.Sleep(retryDelay)
+		}
+	}
+
+	checkErrorPanic(err, "Failed to connect database after multiple attempts")
 	global.Logger.Info("Connect database success", zap.String("host", host))
 	global.Mdb = db
 
@@ -66,13 +92,13 @@ func InitMysql() {
 }
 
 func SetPool() {
-	m := global.Config.Mysql
+	m := config.Cfg.DB
 	sqlDB, err := global.Mdb.DB()
 	checkErrorPanic(err, "Failed to set pool")
 
 	sqlDB.SetMaxIdleConns(m.MaxIdleConns)
 	sqlDB.SetMaxOpenConns(m.MaxOpenConns)
-	sqlDB.SetConnMaxLifetime(time.Duration(m.ConnectTimeout))
+	sqlDB.SetConnMaxLifetime(time.Hour)
 }
 
 // Safe version that doesn't panic
@@ -86,7 +112,7 @@ func safeGenTableDAO() {
 	// Check if table exists before generating
 	var count int64
 	err := global.Mdb.Table("information_schema.tables").
-		Where("table_schema = ? AND table_name = ?", global.Config.Mysql.DBName, "go_crm_user").
+		Where("table_schema = ? AND table_name = ?", config.Cfg.DB.DBName, "go_crm_user").
 		Count(&count).Error
 
 	if err != nil {

@@ -56,6 +56,7 @@ services:
       retries: 10
       start_period: 30s
     restart: on-failure
+    command: --default-authentication-plugin=mysql_native_password
 
   redis:
     image: redis:7.0
@@ -80,7 +81,7 @@ services:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
       - MYSQL_DATABASE=crm
-      - REDIS_HOST=redis_db
+      - REDIS_HOST=redis
       - REDIS_PORT=6379
       - PORT=8002
     depends_on:
